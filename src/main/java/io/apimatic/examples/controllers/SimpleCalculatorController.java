@@ -49,10 +49,10 @@ public final class SimpleCalculatorController extends BaseController {
      */
     public CompletableFuture<Double> getCalculateAsync(
             final GetCalculateInput input) {
-        try { 
-            return prepareGetCalculateRequest(input).executeAsync(); 
-        } catch (Exception e) {  
-            throw new CompletionException(e); 
+        try {
+            return prepareGetCalculateRequest(input).executeAsync();
+        } catch (Exception e) {
+            throw new CompletionException(e);
         }
     }
 
@@ -60,7 +60,7 @@ public final class SimpleCalculatorController extends BaseController {
      * Builds the ApiCall object for getCalculate.
      */
     private ApiCall<Double, ApiException> prepareGetCalculateRequest(
-            final GetCalculateInput input) throws IOException {
+            final GetCalculateInput input) {
         return new ApiCall.Builder<Double, ApiException>()
                 .globalConfig(getGlobalConfiguration())
                 .requestBuilder(requestBuilder -> requestBuilder

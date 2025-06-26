@@ -73,7 +73,6 @@ public class BaseControllerTest {
         return builder.build();
     }
 
-    
     /**
      * Create test configuration.
      */
