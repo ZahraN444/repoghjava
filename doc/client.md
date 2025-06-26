@@ -5,20 +5,18 @@ The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| environment | `Environment` | The API environment. <br> **Default: `Environment.PRODUCTION`** |
 | httpClientConfig | [`Consumer<HttpClientConfiguration.Builder>`](../doc/http-client-configuration-builder.md) | Set up Http Client Configuration instance. |
 
 The API client can be initialized as follows:
 
 ```java
-APIMATICCalculatorClient client = new APIMATICCalculatorClient.Builder()
+APIMATICCalculatorZipClient client = new APIMATICCalculatorZipClient.Builder()
     .httpClientConfig(configBuilder -> configBuilder
             .timeout(0))
-    .environment(Environment.PRODUCTION)
     .build();
 ```
 
-## APIMATIC CalculatorClient Class
+## APIMATIC Calculator - zipClient Class
 
 The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
 
